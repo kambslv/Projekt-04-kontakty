@@ -1,6 +1,8 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
 *, :after, :before { box-sizing: border-box; }
 
+/*to co se nemeni nikdy*/
+
 body {
 	font-family: sans-serif;
 	font-size: 14px;
@@ -9,3 +11,102 @@ body {
 h1 {
 	text-align: center;
 }
+
+img{
+	border-radius: 50%;
+	;
+	object-fit: cover;
+}
+
+.osoba{
+	border: 1px;
+	border-style: solid;
+	border-color: aqua;
+	border-radius: 15px;
+	}
+
+
+/*Mobil a mensi zarizeni*/
+@media (max-width:576px){
+.osoba{
+	display: flex;
+	width: 50vw;
+	justify-content: space-evenly;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+}
+
+.popis{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 15px;
+}
+
+.tym{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;	
+}
+
+.foto{
+	margin: 10px;
+}
+
+}
+
+
+
+
+
+/*Tablet a vetsi zarizeni*/
+@media (min-width:576px) {
+.tym{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;	
+	}
+	
+.osoba{
+	display: flex;
+	width: 70vw;
+	align-items:first flex-end;
+	margin: 10px;
+	}
+	
+.popis{
+	margin: 10px;
+	}
+	
+.foto{
+	margin: 10px;
+	}
+	}
+
+
+
+/*velky display*/
+@media only screen and (min-width: 992px){
+.tym{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.osoba{
+	display: flex;
+	flex-grow: 2;
+	flex-basis: 45%;
+	margin: 5px;
+}
+
+.popis{
+	margin: 10px;
+}
+
+.foto{
+	margin: 10px;
+}
+}
+
